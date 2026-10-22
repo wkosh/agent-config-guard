@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "unreviewed": {
+      "command": "npx",
+      "args": ["-y", "some-mcp-server"],
+      "env": {"API_TOKEN": "not-a-variable-reference"}
+    },
+    "shell": {
+      "command": "bash",
+      "args": ["-c", "run-server"]
+    },
+    "remote": {"url": "http://example.com/mcp"}
+  }
+}
+

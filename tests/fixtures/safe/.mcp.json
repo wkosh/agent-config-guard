@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "reviewed": {
+      "command": "/opt/reviewed/bin/server",
+      "args": ["--read-only"],
+      "env": {"SERVICE_TOKEN": "${SERVICE_TOKEN}"}
+    },
+    "pinned-package": {
+      "command": "npx",
+      "args": ["@example/reviewed-server@1.2.3", "--read-only"]
+    },
+    "remote": {"url": "https://mcp.example.org/api"}
+  }
+}
+
