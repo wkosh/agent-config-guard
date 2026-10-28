@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.1 - Unreleased
+## 0.1.1 - 2026-10-28
 
 - Prepare PyPI metadata and a single package-version source; add `--version`.
 - Add release-triggered Trusted Publishing with an isolated publishing job.

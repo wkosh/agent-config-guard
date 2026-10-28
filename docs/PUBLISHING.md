@@ -1,6 +1,6 @@
 # Publishing 0.1.1
 
-Status: prepared locally; not uploaded to PyPI or pushed to GitHub by this work.
+Release procedure: complete the checks below before treating a version as published.
 The existing public v0.1.0 release is preserved. Do not move its tag or replace its assets.
 
 ## First-time setup
@@ -42,4 +42,4 @@ Publication is distribution infrastructure, not proof that other people depend o
 
 ## Distribution-name update
 
-The PyPI form rejected `agent-config-guard` as too similar to an existing project. The proposed distribution name is now `kosh-config-guard`, identifying the maintainer explicitly. The user registered the pending publisher successfully on 28 October 2026; the package itself is not published yet. The GitHub repository, Python import and CLI command retain their existing names.
+The PyPI form rejected `agent-config-guard` as too similar to an existing project. The distribution name is `kosh-config-guard`, identifying the maintainer explicitly. The user registered the pending publisher successfully on 28 October 2026; publication is verified separately through the release workflow and public index. The GitHub repository, Python import and CLI command retain their existing names.
