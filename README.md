@@ -36,9 +36,7 @@ These findings are review signals, not proof of malicious intent. See [the threa
 
 Python 3.10 or later is required.
 
-The 0.1.1 distribution is being prepared for its first PyPI publication. Until that
-publication is verified, install a built wheel or run from a checkout as shown below.
-The following index command applies **after publication**:
+Install the [published PyPI distribution](https://pypi.org/project/kosh-config-guard/0.1.1/):
 
 ```bash
 python -m pip install kosh-config-guard
