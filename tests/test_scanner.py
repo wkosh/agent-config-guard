@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import sys
 import unittest
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,8 +29,14 @@ class ScannerTests(unittest.TestCase):
         self.assertTrue(payload["runs"][0]["results"][0]["locations"])
 
     def test_discovery_ignores_node_modules(self) -> None:
-        paths = discover(ROOT / "tests" / "fixtures")
-        self.assertFalse(any("node_modules" in path.parts for path in paths))
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            hidden = root / 'node_modules' / 'example' / '.mcp.json'
+            hidden.parent.mkdir(parents=True)
+            hidden.write_text('{"mcpServers": {}}', encoding='utf-8')
+            visible = root / '.mcp.json'
+            visible.write_text('{"mcpServers": {}}', encoding='utf-8')
+            self.assertEqual([visible], discover(root))
 
     def test_exclude_omits_matching_fixture(self) -> None:
         root = ROOT / "tests" / "fixtures"

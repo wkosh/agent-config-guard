@@ -7,10 +7,12 @@ from pathlib import Path
 from .models import SEVERITY_ORDER
 from .reporters import as_json, as_sarif, as_text
 from .scanner import scan
+from . import __version__
 
 
 def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser(description="Statically audit coding-agent and MCP configuration without executing it.")
+    result.add_argument("--version", action="version", version=f"agent-config-guard {__version__}")
     result.add_argument("path", nargs="?", default=".", help="Repository or directory to scan (default: current directory).")
     result.add_argument("--format", choices=("text", "json", "sarif"), default="text")
     result.add_argument("--output", type=Path, help="Write the report to a file instead of stdout.")
