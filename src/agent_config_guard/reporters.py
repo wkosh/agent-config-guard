@@ -4,10 +4,11 @@ import json
 from pathlib import Path
 
 from .models import Finding
+from . import __version__
 
 
 def as_json(findings: list[Finding], root: Path) -> str:
-    return json.dumps({"version": "0.1.0", "findings": [finding.to_dict(root) for finding in findings]}, indent=2, ensure_ascii=False)
+    return json.dumps({"version": __version__, "findings": [finding.to_dict(root) for finding in findings]}, indent=2, ensure_ascii=False)
 
 
 def as_sarif(findings: list[Finding], root: Path) -> str:
@@ -26,7 +27,7 @@ def as_sarif(findings: list[Finding], root: Path) -> str:
     payload = {
         "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
         "version": "2.1.0",
-        "runs": [{"tool": {"driver": {"name": "Agent Config Guard", "version": "0.1.0", "rules": list(rules.values())}}, "results": results}],
+        "runs": [{"tool": {"driver": {"name": "Agent Config Guard", "version": __version__, "rules": list(rules.values())}}, "results": results}],
     }
     return json.dumps(payload, indent=2, ensure_ascii=False)
 

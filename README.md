@@ -36,8 +36,12 @@ These findings are review signals, not proof of malicious intent. See [the threa
 
 Python 3.10 or later is required.
 
+The 0.1.1 distribution is being prepared for its first PyPI publication. Until that
+publication is verified, install a built wheel or run from a checkout as shown below.
+The following index command applies **after publication**:
+
 ```bash
-python -m pip install agent-config-guard
+python -m pip install kosh-config-guard
 agent-config-guard .
 ```
 
@@ -53,6 +57,22 @@ PowerShell:
 $env:PYTHONPATH = "src"
 python -m agent_config_guard .
 ```
+
+To build and test a local distribution, follow [the publishing guide](docs/PUBLISHING.md).
+The installed command supports `agent-config-guard --version`.
+
+The PyPI distribution name is `kosh-config-guard` to distinguish this
+project from similarly named packages. The executable remains `agent-config-guard`
+and the Python import remains `agent_config_guard`. PyPI has accepted the pending publisher configuration for this name;
+the package itself is not published yet.
+
+## Integrate with GitHub Actions
+
+See the [CI integration guide](docs/CI-INTEGRATION.md) and the
+[copyable workflow](examples/github-actions/agent-config-guard.yml).
+The example uses a pinned scanner version, read-only repository access and a SARIF
+artifact. Its PyPI installation step requires the package to have been published first.
+It scans recognized agent/MCP configuration, not every source file in the repository.
 
 ## Reports and CI gates
 

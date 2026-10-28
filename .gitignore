@@ -2,8 +2,10 @@ __pycache__/
 *.py[cod]
 .venv/
 dist/
+dist-namespaced/
 build/
 *.egg-info/
 reports/
 .coverage
 
+dist-kosh/
