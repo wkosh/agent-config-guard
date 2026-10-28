@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "wkosh-agent-config-guard"
+name = "kosh-config-guard"
 dynamic = ["version"]
 description = "Offline, static security scanner for coding-agent and MCP configuration files."
 readme = "README.md"

@@ -41,7 +41,7 @@ publication is verified, install a built wheel or run from a checkout as shown b
 The following index command applies **after publication**:
 
 ```bash
-python -m pip install wkosh-agent-config-guard
+python -m pip install kosh-config-guard
 agent-config-guard .
 ```
 
@@ -61,10 +61,10 @@ python -m agent_config_guard .
 To build and test a local distribution, follow [the publishing guide](docs/PUBLISHING.md).
 The installed command supports `agent-config-guard --version`.
 
-The PyPI distribution name is `wkosh-agent-config-guard` to distinguish this
+The PyPI distribution name is `kosh-config-guard` to distinguish this
 project from similarly named packages. The executable remains `agent-config-guard`
-and the Python import remains `agent_config_guard`. PyPI has not yet confirmed
-acceptance of the new distribution name.
+and the Python import remains `agent_config_guard`. PyPI has accepted the pending publisher configuration for this name;
+the package itself is not published yet.
 
 ## Integrate with GitHub Actions
 

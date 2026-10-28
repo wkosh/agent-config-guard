@@ -7,7 +7,7 @@ After 0.1.1 is published to PyPI, copy `examples/github-actions/agent-config-gua
 Before publication, install the built local wheel instead:
 
 ```console
-python -m pip install --no-index --no-deps /path/to/wkosh_agent_config_guard-0.1.1-py3-none-any.whl
+python -m pip install --no-index --no-deps /path/to/kosh_config_guard-0.1.1-py3-none-any.whl
 agent-config-guard /path/to/your/repository --format sarif --output report.sarif --fail-on high
 ```
 
