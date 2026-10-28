@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.13'
       - name: Install reviewed scanner version
-        run: python -m pip install agent-config-guard==0.1.1
+        run: python -m pip install wkosh-agent-config-guard==0.1.1
       - name: Scan recognized agent and MCP configuration
         run: agent-config-guard . --format sarif --output reports/agent-config-guard.sarif --fail-on high
       - name: Preserve findings, including when the severity gate fails
