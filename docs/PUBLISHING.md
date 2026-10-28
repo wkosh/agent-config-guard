@@ -43,3 +43,7 @@ Publication is distribution infrastructure, not proof that other people depend o
 ## Distribution-name update
 
 The PyPI form rejected `agent-config-guard` as too similar to an existing project. The distribution name is `kosh-config-guard`, identifying the maintainer explicitly. The user registered the pending publisher successfully on 28 October 2026; publication is verified separately through the release workflow and public index. The GitHub repository, Python import and CLI command retain their existing names.
+
+## Verified first publication
+
+Version 0.1.1 was published on 28 October 2026 through [the successful release workflow](https://github.com/wkosh/agent-config-guard/actions/runs/40777547114). Both public-index artifacts were downloaded and their SHA-256 hashes matched PyPI metadata. A fresh environment installed kosh-config-guard==0.1.1 from PyPI and reported CLI version 0.1.1. These verification downloads are maintainer activity, not independent adoption.
